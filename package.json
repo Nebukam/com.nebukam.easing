@@ -1,0 +1,19 @@
+{
+  "name": "com.nebukam.easing",
+  "version": "0.0.1",
+  "displayName": "N:Easing",
+  "description": "Easing functions",
+  "unity": "2019.1",
+  "unityRelease": "10f1",
+  "keywords": [
+  ],
+  "category": "Easing",
+  "author": {
+    "name": "Timothe Lapetite",
+    "email": "nebukam@gmail.com",
+    "url": "https://github.com/Nebukam/com.nebukam.easing.git"
+  },
+  "dependencies": {
+    "com.unity.mathematics": "1.1.0"
+  }
+}
