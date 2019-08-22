@@ -13,7 +13,7 @@ N:Easing provides multiples ways to interact with the most common easing equatio
 ### 1 - **Inline easing using partial class**
 As easy as Lerp.
 
- [```easing(from, to, time)```](https://github.com/Nebukam/com.nebukam.easing/blob/master/Runtime/ease.cs)
+> [easing(from, to, time)](https://github.com/Nebukam/com.nebukam.easing/blob/master/Runtime/ease.cs)
 ```CSharp
 
     using static Nebukam.Easing.ease;
@@ -26,7 +26,7 @@ As easy as Lerp.
 ### 2 - **Static methods**
 While straighfoward to use, the static methods signature is the same as the original Penner's functions, making it slightly less easy to grasp and use. **The static methods are flagged to be aggressively inlined, for increased performance.**
 
-```Ease(float t, float b, float c, float d)```
+>[Ease(float t, float b, float c, float d)](https://github.com/Nebukam/com.nebukam.easing/blob/master/Runtime/Easing.cs)
 
 ```CSharp
 
@@ -37,15 +37,23 @@ While straighfoward to use, the static methods signature is the same as the orig
 
 
 ### 3 - **Pre-cached delegate to static methods**
-Makes it easy to customize easing methods, and build flexible code. Delegate use the same name as their corresponding method, **however since they are properties, starts with a lowercase instead**.
-> Make sure to use cached delegates to avoid garbage generation.
+Makes it easy to customize easing methods, and build flexible code. Delegate use the same name as their corresponding method, **however since they are properties, starts with a lowercase instead**. _Make sure to use cached delegates to avoid garbage generation_
 
-```ease(float from, float to, float t)```
+>[ease(float from, float to, float t)](https://github.com/Nebukam/com.nebukam.easing/blob/master/Runtime/Easing.cs)
 ```CSharp
 
     Easing.Ease easeFunc = Easing.linear;
     easingFunc(0.5f, 0f, 10f, 1f);
     // output : 5.0
+
+```
+
+Pre-cached delegate can be accessed per groups, making it easy to choose a specific easing technique :
+```CSharp
+
+    Easing.backEaseIn
+    //Can also be accessed through :
+    Easing.Back.In
 
 ```
 
@@ -101,7 +109,22 @@ The [```CurveEase```](https://github.com/Nebukam/com.nebukam.easing/blob/master/
     //output with linear curve : 5.0
 
 ```
+---
+## Out-of-the-box easings :
 
+| Easing        |  Out           | In  | InOut | OutIn |
+| ------------- |:---| :---|:---|:---|
+| **Linear**      | linear | - | - | - |
+| **Expo**      | expoEaseOut | expoEaseIn | expoEaseInOut | expoEaseOutIn |
+| **Circular**      | circEaseOut | circEaseIn | circEaseInOut | circEaseOutIn |
+| **Quad**      | quadEaseOut | quadEaseIn | quadEaseInOut | quadEaseOutIn |
+| **Sine**      | sineEaseOut | sineEaseIn | sineEaseInOut | sineEaseOutIn |
+| **Cubic**      | cubicEaseOut | cubicEaseIn | cubicEaseInOut | cubicEaseOutIn |
+| **Quartic**      | quartEaseOut | quartEaseIn | quartEaseInOut | quartEaseOutIn |
+| **Quintic**      | quintEaseOut | quintEaseIn | quintEaseInOut | quintEaseOutIn |
+| **Elastic**      | elasticEaseOut | elasticEaseIn | elasticEaseInOut | elasticEaseOutIn |
+| **Bounce**      | bounceEaseOut | bounceEaseIn | bounceEaseInOut | bounceEaseOutIn |
+| **Back**      | backEaseOut | backEaseIn | backEaseInOut | backEaseOutIn |
 
 ---
 ## Hows
