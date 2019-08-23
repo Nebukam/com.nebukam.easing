@@ -5,7 +5,7 @@
 # N:Easing
 #### Compact easing library for Unity
 
-N:Easing is a small easing library offering a lot of different and efficient ways to ease & tween Unity.Mathematics's ```float```, ```float2```, ```float3``` & ```float4```. Is is extremely easy to use and build upon.
+N:Easing is a small easing library offering a lot of different and efficient ways to ease & tween Unity.Mathematics's ```float```, ```float2```, ```float3``` & ```float4```. It is straighforward to use and extend.
 
 ### Features
 N:Easing provides multiples ways to interact with the most common easing equations, as well as using ```AnimationCurve``` for even more custom easing.
