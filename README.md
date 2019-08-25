@@ -48,12 +48,17 @@ Makes it easy to customize easing methods, and build flexible code. Delegate use
 
 ```
 
-Pre-cached delegate can be accessed per groups, making it easy to choose a specific easing technique :
+Pre-cached delegate can be accessed as groups, making it easy to choose a specific easing equation :
 ```CSharp
 
     Easing.backEaseIn
     //Can also be accessed through :
     Easing.Back.In
+    
+    //As well as :
+    Easing.Back.Out
+    Easing.Back.InOut
+    Easing.Back.OutIn
 
 ```
 
