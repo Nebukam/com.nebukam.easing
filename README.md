@@ -64,7 +64,7 @@ Pre-cached delegate can be accessed as groups, making it easy to choose a specif
 
 ### 4 - **Ease object & extensions**
 
-The [```EaseFloat```](https://github.com/Nebukam/com.nebukam.easing/blob/master/Runtime/Jobs/EaseFloat.cs) struct is similar to a Tween object, only much lighter. It keeps track of the start, end, and diff value, as well as duration & current time. It can be implicitly casted to its original type, and as such is easy to work with. **It makes it easy to use easing in Jobs without any boilerplate code**.
+The [```EaseFloat```](https://github.com/Nebukam/com.nebukam.easing/blob/master/Runtime/Jobs/EaseFloat.cs) struct is similar to a Tween object, only much lighter. It keeps track of the start, end, and diff value, as well as duration & current time. It can be implicitly cast to its original type, and as such is easy to work with. **It makes it easy to use easing in Jobs without any boilerplate code**.
 
 ```CSharp
 
