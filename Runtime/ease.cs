@@ -45,21 +45,21 @@ namespace Nebukam.Easing
         #region Expo
 
         /// <summary>Easing equation function for an exponential (2^t) easing out: decelerating from zero velocity.</summary>
-        public static float expoEaseOut(float from, float to, float t){ return Easing.ExpoEaseOut(t, from, to - from, 1.0f); }
-        
+        public static float expoEaseOut(float from, float to, float t) { return Easing.ExpoEaseOut(t, from, to - from, 1.0f); }
+
         /// <summary>Easing equation function for an exponential (2^t) easing out: decelerating from zero velocity.</summary>
         public static float2 expoEaseOut(float2 from, float2 to, float t) { return Easing2.ExpoEaseOut(t, from, to - from, 1.0f); }
-        
+
         /// <summary>Easing equation function for an exponential (2^t) easing out: decelerating from zero velocity.</summary>
         public static float3 expoEaseOut(float3 from, float3 to, float t) { return Easing3.ExpoEaseOut(t, from, to - from, 1.0f); }
-        
+
         /// <summary>Easing equation function for an exponential (2^t) easing out: decelerating from zero velocity.</summary>
         public static float4 expoEaseOut(float4 from, float4 to, float t) { return Easing4.ExpoEaseOut(t, from, to - from, 1.0f); }
 
 
         /// <summary>Easing equation function for an exponential (2^t) easing in: accelerating from zero velocity.</summary>
         public static float expoEaseIn(float from, float to, float t) { return Easing.ExpoEaseIn(t, from, to - from, 1.0f); }
-        
+
         /// <summary>Easing equation function for an exponential (2^t) easing in: accelerating from zero velocity.</summary>
         public static float2 expoEaseIn(float2 from, float2 to, float t) { return Easing2.ExpoEaseIn(t, from, to - from, 1.0f); }
 
@@ -75,7 +75,7 @@ namespace Nebukam.Easing
 
         /// <summary>Easing equation function for an exponential (2^t) easing in/out: acceleration until halfway, then deceleration.</summary>
         public static float2 expoEaseInOut(float2 from, float2 to, float t) { return Easing2.ExpoEaseInOut(t, from, to - from, 1.0f); }
-        
+
         /// <summary>Easing equation function for an exponential (2^t) easing in/out: acceleration until halfway, then deceleration.</summary>
         public static float3 expoEaseInOut(float3 from, float3 to, float t) { return Easing3.ExpoEaseInOut(t, from, to - from, 1.0f); }
 
@@ -105,7 +105,7 @@ namespace Nebukam.Easing
 
         /// <summary>Easing equation function for a circular (sqrt(1-t^2)) easing out: decelerating from zero velocity.</summary>
         public static float2 circEaseOut(float2 from, float2 to, float t) { return Easing2.CircEaseOut(t, from, to - from, 1.0f); }
-        
+
         /// <summary>Easing equation function for a circular (sqrt(1-t^2)) easing out: decelerating from zero velocity.</summary>
         public static float3 circEaseOut(float3 from, float3 to, float t) { return Easing3.CircEaseOut(t, from, to - from, 1.0f); }
 
@@ -386,7 +386,7 @@ namespace Nebukam.Easing
 
         /// <summary>Easing equation function for a quintic (t^5) easing out: decelerating from zero velocity.</summary>
         public static float4 quintEaseOut(float4 from, float4 to, float t) { return Easing4.QuintEaseOut(t, from, to - from, 1.0f); }
-        
+
 
         /// <summary>Easing equation function for a quintic (t^5) easing in: accelerating from zero velocity.</summary>
         public static float quintEaseIn(float from, float to, float t) { return Easing.QuintEaseIn(t, from, to - from, 1.0f); }

@@ -108,7 +108,7 @@ namespace Nebukam.Easing
             @this.value = v;
             return v;
         }
-        
+
         /// <summary>
         /// Easing equation function for an exponential (2^t) easing out/in: 
         /// deceleration until halfway, then acceleration.

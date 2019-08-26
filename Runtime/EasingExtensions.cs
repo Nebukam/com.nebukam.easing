@@ -19,7 +19,6 @@
 // SOFTWARE.
 
 using Unity.Mathematics;
-using static Unity.Mathematics.math;
 
 namespace Nebukam.Easing
 {
@@ -35,7 +34,8 @@ namespace Nebukam.Easing
         /// <returns></returns>
         public static EaseFloat Ease(this float @this, float to, float duration = 1.0f)
         {
-            return new EaseFloat() {
+            return new EaseFloat()
+            {
                 time = 0f,
                 duration = duration,
                 from = @this,

@@ -18,8 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using UnityEngine;
 using Unity.Mathematics;
+using UnityEngine;
 
 namespace Nebukam.Easing
 {
@@ -69,7 +69,7 @@ namespace Nebukam.Easing
         /// <param name="to"></param>
         /// <param name="t">normalized</param>
         /// <returns></returns>
-        public float Ease(float from, float to, float t) { return from + m_curve.Evaluate(t) * (to-from); }
+        public float Ease(float from, float to, float t) { return from + m_curve.Evaluate(t) * (to - from); }
 
         #endregion
 

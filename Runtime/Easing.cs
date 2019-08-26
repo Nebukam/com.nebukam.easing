@@ -19,13 +19,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 using System.Runtime.CompilerServices;
-using Unity.Mathematics;
 using static Unity.Mathematics.math;
 
 namespace Nebukam.Easing
 {
 
-    
+
     /// <summary>
     /// Robert Penner's easing functions for float.
     /// Cached delegates start with a lowercase.
@@ -46,7 +45,7 @@ namespace Nebukam.Easing
         internal const float HalfPI = PI * 0.5f;
         internal const float TAU = PI * 2f;
 
-        public struct FloatEase{ public Ease Out, In, InOut, OutIn; }
+        public struct FloatEase { public Ease Out, In, InOut, OutIn; }
 
         #region None
 
@@ -238,7 +237,7 @@ namespace Nebukam.Easing
 
         #region Quad
 
-        
+
         public static Ease quadEaseOut = QuadEaseOut;
         public static Ease quadEaseIn = QuadEaseIn;
         public static Ease quadEaseInOut = QuadEaseInOut;
@@ -873,7 +872,7 @@ namespace Nebukam.Easing
         }
 
         #endregion
-        
+
     }
 
 }

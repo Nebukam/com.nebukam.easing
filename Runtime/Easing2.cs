@@ -25,7 +25,7 @@ using static Unity.Mathematics.math;
 
 namespace Nebukam.Easing
 {
-    
+
     /// <summary>
     /// Robert Penner's easing functions for float2.
     /// Cached delegates start with a lowercase.

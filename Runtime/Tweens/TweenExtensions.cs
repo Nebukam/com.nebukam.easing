@@ -1,5 +1,4 @@
 ﻿using Unity.Mathematics;
-using static Unity.Mathematics.math;
 
 namespace Nebukam.Easing
 {

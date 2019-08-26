@@ -29,9 +29,11 @@ namespace Nebukam.Easing
         public float from, diff;
         public float value;
 
-        public float progress {
+        public float progress
+        {
             get { return time / duration; }
-            set {
+            set
+            {
                 time = duration * value;
                 this.value = ease(time, from, diff, duration);
             }

@@ -18,7 +18,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-using Unity.Mathematics;
 using static Unity.Mathematics.math;
 
 namespace Nebukam.Easing
@@ -46,7 +45,7 @@ namespace Nebukam.Easing
             @this.value = @this.from;
             return @this;
         }
-        
+
         #region Linear
 
         public static float Linear(this ref EaseFloat @this, float delta)
@@ -105,7 +104,7 @@ namespace Nebukam.Easing
             @this.value = v;
             return v;
         }
-        
+
         /// <summary>
         /// Easing equation function for an exponential (2^t) easing out/in: 
         /// deceleration until halfway, then acceleration.
