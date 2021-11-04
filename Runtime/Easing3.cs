@@ -21,6 +21,7 @@
 
 using System.Runtime.CompilerServices;
 using Unity.Mathematics;
+using UnityEngine;
 using static Unity.Mathematics.math;
 
 namespace Nebukam.Easing
@@ -871,6 +872,30 @@ namespace Nebukam.Easing
                 return BackEaseOut(t * 2.0f, b, c * 0.5f, d);
             return BackEaseIn((t * 2.0f) - d, b + c * 0.5f, c * 0.5f, d);
         }
+
+        #endregion
+
+        #region Slerp
+
+        public static Ease slerp = SlerpEase;
+
+        public static Float3Ease Slerp = new Float3Ease() { Out = slerp, In = slerp, InOut = slerp, OutIn = slerp };
+
+        /// <summary>
+        /// Easing equation function for a back (overshooting cubic easing: (s+1)*t^3 - s*t^2) easing out: 
+        /// decelerating from zero velocity.
+        /// </summary>
+        /// <param name="t">Current time in seconds.</param>
+        /// <param name="b">Starting value.</param>
+        /// <param name="c">Final value.</param>
+        /// <param name="d">Duration of animation.</param>
+        /// <returns>The correct value.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float3 SlerpEase(float t, float3 b, float3 c, float d)
+        {
+            return Vector3.Slerp(b, b+c, t/f);
+        }
+
 
         #endregion
 

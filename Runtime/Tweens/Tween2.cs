@@ -105,22 +105,24 @@ namespace Nebukam.Easing
         /// Advance this struct internally.
         /// </summary>
         /// <param name="delta"></param>
-        /// <returns></returns>
-        public void Advance(float delta)
+        /// <returns>Current value</returns>
+        public float2 Advance(float delta)
         {
             time += delta;
             value = ease(time, from, diff, duration);
+            return value;
         }
 
         /// <summary>
         /// Advance this struct internally.
         /// </summary>
         /// <param name="delta"></param>
-        /// <returns></returns>
-        public void Clamp(float delta)
+        /// <returns>Current value</returns>
+        public float2 Clamp(float delta)
         {
             time = clamp(time + delta, 0f, duration);
             value = ease(time, from, diff, duration);
+            return value;
         }
 
         /// <summary>
