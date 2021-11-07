@@ -33,6 +33,8 @@ namespace Nebukam.Easing
         T val { get; }
         T At(float t);
 
+        //ITweenData<T> data { get; set; }
+
     }
 
 }

@@ -31,16 +31,16 @@ namespace Nebukam.Easing
     /// Robert Penner's easing functions for float.
     /// Cached delegates start with a lowercase.
     /// </summary>
-    public static class Float2
+    public static class Double2
     {
 
         #region None
 
-        internal static Easing.Ease<float2> none = None;
-        public static Easing.EaseVariants<float2> NoEase = new Easing.EaseVariants<float2>() { Out = none, In = none, InOut = none, OutIn = none };
+        internal static Easing.Ease<double2> none = None;
+        public static Easing.EaseVariants<double2> NoEase = new Easing.EaseVariants<double2>() { Out = none, In = none, InOut = none, OutIn = none };
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 None(float2 a, float2 b, float t, float d){ return b; }
+        internal static double2 None(double2 a, double2 b, float t, float d){ return b; }
 
         #endregion
 
@@ -48,22 +48,22 @@ namespace Nebukam.Easing
 
         #region Linear
 
-        internal static Easing.Ease<float2> linear = Linear;
-        public static Easing.EaseVariants<float2> LinearEase = new Easing.EaseVariants<float2>() { Out = linear, In = linear, InOut = linear, OutIn = linear };
+        internal static Easing.Ease<double2> linear = Linear;
+        public static Easing.EaseVariants<double2> LinearEase = new Easing.EaseVariants<double2>() { Out = linear, In = linear, InOut = linear, OutIn = linear };
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 Linear(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.Linear(t, d)); }
+        internal static double2 Linear(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.Linear(t, d)); }
 
         #endregion
 
         #region Expo
 
-        internal static Easing.Ease<float2> expoEaseOut = ExpoEaseOut;
-        internal static Easing.Ease<float2> expoEaseIn = ExpoEaseIn;
-        internal static Easing.Ease<float2> expoEaseInOut = ExpoEaseInOut;
-        internal static Easing.Ease<float2> expoEaseOutIn = ExpoEaseOutIn;
+        internal static Easing.Ease<double2> expoEaseOut = ExpoEaseOut;
+        internal static Easing.Ease<double2> expoEaseIn = ExpoEaseIn;
+        internal static Easing.Ease<double2> expoEaseInOut = ExpoEaseInOut;
+        internal static Easing.Ease<double2> expoEaseOutIn = ExpoEaseOutIn;
 
-        public static Easing.EaseVariants<float2> ExpoEase = new Easing.EaseVariants<float2>() { Out = expoEaseOut, In = expoEaseIn, InOut = expoEaseInOut, OutIn = expoEaseOutIn };
+        public static Easing.EaseVariants<double2> ExpoEase = new Easing.EaseVariants<double2>() { Out = expoEaseOut, In = expoEaseIn, InOut = expoEaseInOut, OutIn = expoEaseOutIn };
 
         /// <summary>
         /// Easing equation function for an exponential (2^t) easing out: 
@@ -75,7 +75,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ExpoEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseOut(t, d)); }
+        internal static double2 ExpoEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for an exponential (2^t) easing in: 
@@ -87,7 +87,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ExpoEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseIn(t, d)); }
+        internal static double2 ExpoEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for an exponential (2^t) easing in/out: 
@@ -99,7 +99,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ExpoEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseInOut(t, d)); }
+        internal static double2 ExpoEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseInOut(t, d)); }
 
 
         /// <summary>
@@ -112,18 +112,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ExpoEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseOutIn(t, d)); }
+        internal static double2 ExpoEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ExpoEaseOutIn(t, d)); }
 
         #endregion
 
         #region Circular
 
-        internal static Easing.Ease<float2> circEaseOut = CircEaseOut;
-        internal static Easing.Ease<float2> circEaseIn = CircEaseIn;
-        internal static Easing.Ease<float2> circEaseInOut = CircEaseInOut;
-        internal static Easing.Ease<float2> circEaseOutIn = CircEaseOutIn;
+        internal static Easing.Ease<double2> circEaseOut = CircEaseOut;
+        internal static Easing.Ease<double2> circEaseIn = CircEaseIn;
+        internal static Easing.Ease<double2> circEaseInOut = CircEaseInOut;
+        internal static Easing.Ease<double2> circEaseOutIn = CircEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Circ = new Easing.EaseVariants<float2>() { Out = circEaseOut, In = circEaseIn, InOut = circEaseInOut, OutIn = circEaseOutIn };
+        public static Easing.EaseVariants<double2> Circ = new Easing.EaseVariants<double2>() { Out = circEaseOut, In = circEaseIn, InOut = circEaseInOut, OutIn = circEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a circular (sqrt(1-t^2)) easing out: 
@@ -135,7 +135,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CircEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CircEaseOut(t, d)); }
+        internal static double2 CircEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CircEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a circular (sqrt(1-t^2)) easing in: 
@@ -147,7 +147,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CircEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CircEaseIn(t, d)); }
+        internal static double2 CircEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CircEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a circular (sqrt(1-t^2)) easing in/out: 
@@ -159,7 +159,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CircEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CircEaseInOut(t, d)); }
+        internal static double2 CircEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CircEaseInOut(t, d)); }
 
 
         /// <summary>
@@ -172,19 +172,19 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CircEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CircEaseOutIn(t, d)); }
+        internal static double2 CircEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CircEaseOutIn(t, d)); }
 
         #endregion
 
         #region Quad
 
 
-        internal static Easing.Ease<float2> quadEaseOut = QuadEaseOut;
-        internal static Easing.Ease<float2> quadEaseIn = QuadEaseIn;
-        internal static Easing.Ease<float2> quadEaseInOut = QuadEaseInOut;
-        internal static Easing.Ease<float2> quadEaseOutIn = QuadEaseOutIn;
+        internal static Easing.Ease<double2> quadEaseOut = QuadEaseOut;
+        internal static Easing.Ease<double2> quadEaseIn = QuadEaseIn;
+        internal static Easing.Ease<double2> quadEaseInOut = QuadEaseInOut;
+        internal static Easing.Ease<double2> quadEaseOutIn = QuadEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Quad = new Easing.EaseVariants<float2>() { Out = quadEaseOut, In = quadEaseIn, InOut = quadEaseInOut, OutIn = quadEaseOutIn };
+        public static Easing.EaseVariants<double2> Quad = new Easing.EaseVariants<double2>() { Out = quadEaseOut, In = quadEaseIn, InOut = quadEaseInOut, OutIn = quadEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a quadratic (t^2) easing out: 
@@ -196,7 +196,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuadEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseOut(t, d)); }
+        internal static double2 QuadEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quadratic (t^2) easing in: 
@@ -208,7 +208,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuadEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseIn(t, d)); }
+        internal static double2 QuadEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quadratic (t^2) easing in/out: 
@@ -220,7 +220,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuadEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseInOut(t, d)); }
+        internal static double2 QuadEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseInOut(t, d)); }
 
 
         /// <summary>
@@ -233,18 +233,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuadEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseOutIn(t, d)); }
+        internal static double2 QuadEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuadEaseOutIn(t, d)); }
 
         #endregion
 
         #region Sine
 
-        internal static Easing.Ease<float2> sineEaseOut = SineEaseOut;
-        internal static Easing.Ease<float2> sineEaseIn = SineEaseIn;
-        internal static Easing.Ease<float2> sineEaseInOut = SineEaseInOut;
-        internal static Easing.Ease<float2> sineEaseOutIn = SineEaseOutIn;
+        internal static Easing.Ease<double2> sineEaseOut = SineEaseOut;
+        internal static Easing.Ease<double2> sineEaseIn = SineEaseIn;
+        internal static Easing.Ease<double2> sineEaseInOut = SineEaseInOut;
+        internal static Easing.Ease<double2> sineEaseOutIn = SineEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Sine = new Easing.EaseVariants<float2>() { Out = sineEaseOut, In = sineEaseIn, InOut = sineEaseInOut, OutIn = sineEaseOutIn };
+        public static Easing.EaseVariants<double2> Sine = new Easing.EaseVariants<double2>() { Out = sineEaseOut, In = sineEaseIn, InOut = sineEaseInOut, OutIn = sineEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a sinusoidal (sin(t)) easing out: 
@@ -256,7 +256,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 SineEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.SineEaseOut(t, d)); }
+        internal static double2 SineEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.SineEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a sinusoidal (sin(t)) easing in: 
@@ -268,7 +268,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 SineEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.SineEaseIn(t, d)); }
+        internal static double2 SineEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.SineEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a sinusoidal (sin(t)) easing in/out: 
@@ -280,7 +280,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 SineEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.SineEaseInOut(t, d)); }
+        internal static double2 SineEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.SineEaseInOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a sinusoidal (sin(t)) easing in/out: 
@@ -292,18 +292,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 SineEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.SineEaseOutIn(t, d)); }
+        internal static double2 SineEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.SineEaseOutIn(t, d)); }
 
         #endregion
 
         #region Cubic
 
-        internal static Easing.Ease<float2> cubicEaseOut = CubicEaseOut;
-        internal static Easing.Ease<float2> cubicEaseIn = CubicEaseIn;
-        internal static Easing.Ease<float2> cubicEaseInOut = CubicEaseInOut;
-        internal static Easing.Ease<float2> cubicEaseOutIn = CubicEaseOutIn;
+        internal static Easing.Ease<double2> cubicEaseOut = CubicEaseOut;
+        internal static Easing.Ease<double2> cubicEaseIn = CubicEaseIn;
+        internal static Easing.Ease<double2> cubicEaseInOut = CubicEaseInOut;
+        internal static Easing.Ease<double2> cubicEaseOutIn = CubicEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Cubic = new Easing.EaseVariants<float2>() { Out = cubicEaseOut, In = cubicEaseIn, InOut = cubicEaseInOut, OutIn = cubicEaseOutIn };
+        public static Easing.EaseVariants<double2> Cubic = new Easing.EaseVariants<double2>() { Out = cubicEaseOut, In = cubicEaseIn, InOut = cubicEaseInOut, OutIn = cubicEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a cubic (t^3) easing out: 
@@ -315,7 +315,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CubicEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseOut(t, d)); }
+        internal static double2 CubicEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a cubic (t^3) easing in: 
@@ -327,7 +327,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CubicEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseIn(t, d)); }
+        internal static double2 CubicEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a cubic (t^3) easing in/out: 
@@ -339,7 +339,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CubicEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseInOut(t, d)); }
+        internal static double2 CubicEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseInOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a cubic (t^3) easing out/in: 
@@ -351,18 +351,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 CubicEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseOutIn(t, d)); }
+        internal static double2 CubicEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.CubicEaseOutIn(t, d)); }
 
         #endregion
 
         #region Quartic
 
-        internal static Easing.Ease<float2> quartEaseOut = QuartEaseOut;
-        internal static Easing.Ease<float2> quartEaseIn = QuartEaseIn;
-        internal static Easing.Ease<float2> quartEaseInOut = QuartEaseInOut;
-        internal static Easing.Ease<float2> quartEaseOutIn = QuartEaseOutIn;
+        internal static Easing.Ease<double2> quartEaseOut = QuartEaseOut;
+        internal static Easing.Ease<double2> quartEaseIn = QuartEaseIn;
+        internal static Easing.Ease<double2> quartEaseInOut = QuartEaseInOut;
+        internal static Easing.Ease<double2> quartEaseOutIn = QuartEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Quart = new Easing.EaseVariants<float2>() { Out = quartEaseOut, In = quartEaseIn, InOut = quartEaseInOut, OutIn = quartEaseOutIn };
+        public static Easing.EaseVariants<double2> Quart = new Easing.EaseVariants<double2>() { Out = quartEaseOut, In = quartEaseIn, InOut = quartEaseInOut, OutIn = quartEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a quartic (t^4) easing out: 
@@ -374,7 +374,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuartEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseOut(t, d)); }
+        internal static double2 QuartEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quartic (t^4) easing in: 
@@ -386,7 +386,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuartEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseIn(t, d)); }
+        internal static double2 QuartEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quartic (t^4) easing in/out: 
@@ -398,7 +398,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuartEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseInOut(t, d)); }
+        internal static double2 QuartEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseInOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quartic (t^4) easing out/in: 
@@ -410,18 +410,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuartEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseOutIn(t, d)); }
+        internal static double2 QuartEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuartEaseOutIn(t, d)); }
 
         #endregion
 
         #region Quintic
 
-        internal static Easing.Ease<float2> quintEaseOut = QuintEaseOut;
-        internal static Easing.Ease<float2> quintEaseIn = QuintEaseIn;
-        internal static Easing.Ease<float2> quintEaseInOut = QuintEaseInOut;
-        internal static Easing.Ease<float2> quintEaseOutIn = QuintEaseOutIn;
+        internal static Easing.Ease<double2> quintEaseOut = QuintEaseOut;
+        internal static Easing.Ease<double2> quintEaseIn = QuintEaseIn;
+        internal static Easing.Ease<double2> quintEaseInOut = QuintEaseInOut;
+        internal static Easing.Ease<double2> quintEaseOutIn = QuintEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Quint = new Easing.EaseVariants<float2>() { Out = quintEaseOut, In = quintEaseIn, InOut = quintEaseInOut, OutIn = quintEaseOutIn };
+        public static Easing.EaseVariants<double2> Quint = new Easing.EaseVariants<double2>() { Out = quintEaseOut, In = quintEaseIn, InOut = quintEaseInOut, OutIn = quintEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a quintic (t^5) easing out: 
@@ -433,7 +433,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuintEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseOut(t, d)); }
+        internal static double2 QuintEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quintic (t^5) easing in: 
@@ -445,7 +445,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuintEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseIn(t, d)); }
+        internal static double2 QuintEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quintic (t^5) easing in/out: 
@@ -457,7 +457,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuintEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseInOut(t, d)); }
+        internal static double2 QuintEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseInOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a quintic (t^5) easing in/out: 
@@ -469,18 +469,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 QuintEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseOutIn(t, d)); }
+        internal static double2 QuintEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.QuintEaseOutIn(t, d)); }
 
         #endregion
 
         #region Elastic
 
-        internal static Easing.Ease<float2> elasticEaseOut = ElasticEaseOut;
-        internal static Easing.Ease<float2> elasticEaseIn = ElasticEaseIn;
-        internal static Easing.Ease<float2> elasticEaseInOut = ElasticEaseInOut;
-        internal static Easing.Ease<float2> elasticEaseOutIn = ElasticEaseOutIn;
+        internal static Easing.Ease<double2> elasticEaseOut = ElasticEaseOut;
+        internal static Easing.Ease<double2> elasticEaseIn = ElasticEaseIn;
+        internal static Easing.Ease<double2> elasticEaseInOut = ElasticEaseInOut;
+        internal static Easing.Ease<double2> elasticEaseOutIn = ElasticEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Elastic = new Easing.EaseVariants<float2>() { Out = elasticEaseOut, In = elasticEaseIn, InOut = elasticEaseInOut, OutIn = elasticEaseOutIn };
+        public static Easing.EaseVariants<double2> Elastic = new Easing.EaseVariants<double2>() { Out = elasticEaseOut, In = elasticEaseIn, InOut = elasticEaseInOut, OutIn = elasticEaseOutIn };
 
         /// <summary>
         /// Easing equation function for an elastic (exponentially decaying sine wave) easing out: 
@@ -492,7 +492,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ElasticEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseOut(t, d)); }
+        internal static double2 ElasticEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for an elastic (exponentially decaying sine wave) easing in: 
@@ -504,7 +504,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ElasticEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseIn(t, d)); }
+        internal static double2 ElasticEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for an elastic (exponentially decaying sine wave) easing in/out: 
@@ -516,7 +516,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ElasticEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseInOut(t, d)); }
+        internal static double2 ElasticEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseInOut(t, d)); }
 
 
         /// <summary>
@@ -529,18 +529,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 ElasticEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseOutIn(t, d)); }
+        internal static double2 ElasticEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.ElasticEaseOutIn(t, d)); }
 
         #endregion
 
         #region Bounce
 
-        internal static Easing.Ease<float2> bounceEaseOut = BounceEaseOut;
-        internal static Easing.Ease<float2> bounceEaseIn = BounceEaseIn;
-        internal static Easing.Ease<float2> bounceEaseInOut = BounceEaseInOut;
-        internal static Easing.Ease<float2> bounceEaseOutIn = BounceEaseOutIn;
+        internal static Easing.Ease<double2> bounceEaseOut = BounceEaseOut;
+        internal static Easing.Ease<double2> bounceEaseIn = BounceEaseIn;
+        internal static Easing.Ease<double2> bounceEaseInOut = BounceEaseInOut;
+        internal static Easing.Ease<double2> bounceEaseOutIn = BounceEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Bounce = new Easing.EaseVariants<float2>() { Out = bounceEaseOut, In = bounceEaseIn, InOut = bounceEaseInOut, OutIn = bounceEaseOutIn };
+        public static Easing.EaseVariants<double2> Bounce = new Easing.EaseVariants<double2>() { Out = bounceEaseOut, In = bounceEaseIn, InOut = bounceEaseInOut, OutIn = bounceEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a bounce (exponentially decaying parabolic bounce) easing out: 
@@ -552,7 +552,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BounceEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseOut(t, d)); }
+        internal static double2 BounceEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a bounce (exponentially decaying parabolic bounce) easing in: 
@@ -564,7 +564,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BounceEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseIn(t, d)); }
+        internal static double2 BounceEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a bounce (exponentially decaying parabolic bounce) easing in/out: 
@@ -576,7 +576,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BounceEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseInOut(t, d)); }
+        internal static double2 BounceEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseInOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a bounce (exponentially decaying parabolic bounce) easing out/in: 
@@ -588,18 +588,18 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BounceEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseOutIn(t, d)); }
+        internal static double2 BounceEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BounceEaseOutIn(t, d)); }
 
         #endregion
 
         #region Back
 
-        internal static Easing.Ease<float2> backEaseOut = BackEaseOut;
-        internal static Easing.Ease<float2> backEaseIn = BackEaseIn;
-        internal static Easing.Ease<float2> backEaseInOut = BackEaseInOut;
-        internal static Easing.Ease<float2> backEaseOutIn = BackEaseOutIn;
+        internal static Easing.Ease<double2> backEaseOut = BackEaseOut;
+        internal static Easing.Ease<double2> backEaseIn = BackEaseIn;
+        internal static Easing.Ease<double2> backEaseInOut = BackEaseInOut;
+        internal static Easing.Ease<double2> backEaseOutIn = BackEaseOutIn;
 
-        public static Easing.EaseVariants<float2> Back = new Easing.EaseVariants<float2>() { Out = backEaseOut, In = backEaseIn, InOut = backEaseInOut, OutIn = backEaseOutIn };
+        public static Easing.EaseVariants<double2> Back = new Easing.EaseVariants<double2>() { Out = backEaseOut, In = backEaseIn, InOut = backEaseInOut, OutIn = backEaseOutIn };
 
         /// <summary>
         /// Easing equation function for a back (overshooting cubic easing: (s+1)*t^3 - s*t^2) easing out: 
@@ -611,7 +611,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BackEaseOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BackEaseOut(t, d)); }
+        internal static double2 BackEaseOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BackEaseOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a back (overshooting cubic easing: (s+1)*t^3 - s*t^2) easing in: 
@@ -623,7 +623,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BackEaseIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BackEaseIn(t, d)); }
+        internal static double2 BackEaseIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BackEaseIn(t, d)); }
 
         /// <summary>
         /// Easing equation function for a back (overshooting cubic easing: (s+1)*t^3 - s*t^2) easing in/out: 
@@ -635,7 +635,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BackEaseInOut(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BackEaseInOut(t, d)); }
+        internal static double2 BackEaseInOut(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BackEaseInOut(t, d)); }
 
         /// <summary>
         /// Easing equation function for a back (overshooting cubic easing: (s+1)*t^3 - s*t^2) easing out/in: 
@@ -647,7 +647,7 @@ namespace Nebukam.Easing
         /// <param name="d">Duration of animation.</param>
         /// <returns>The correct value.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        internal static float2 BackEaseOutIn(float2 a, float2 b, float t, float d) { return lerp(a, b, Easing.BackEaseOutIn(t, d)); }
+        internal static double2 BackEaseOutIn(double2 a, double2 b, float t, float d) { return lerp(a, b, Easing.BackEaseOutIn(t, d)); }
 
         #endregion
 

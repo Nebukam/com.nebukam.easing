@@ -31,14 +31,131 @@ namespace Nebukam.Easing
 
             m_curve = c;
 
+            m_intEase = IntEase;
+            m_int2Ease = Int2Ease;
+            m_int3Ease = Int3Ease;
+            m_int4Ease = Int4Ease;
+
+            m_doubleEase = DoubleEase;
+            m_double2Ease = Double2Ease;
+            m_double3Ease = Double3Ease;
+            m_double4Ease = Double4Ease;
+
             m_floatEase = FloatEase;
             m_float2Ease = Float2Ease;
             m_float3Ease = Float3Ease;
             m_float3EaseSlerp = Float3EaseSlerp;
             m_float4Ease = Float4Ease;
+
             m_quaternionEase = QuaternionEase;
 
         }
+
+        #region double
+
+        protected Easing.Ease<double> m_doubleEase;
+        public Easing.Ease<double> doubleEase { get { return m_doubleEase; } }
+        protected double DoubleEase(double a, double b, float t, float d)
+        {
+            return lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<double>(CurveEase e) { return e.doubleEase; }
+
+        #endregion
+
+        #region double2
+
+        protected Easing.Ease<double2> m_double2Ease;
+        public Easing.Ease<double2> double2Ease { get { return m_double2Ease; } }
+        protected double2 Double2Ease(double2 a, double2 b, float t, float d)
+        {
+            return lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<double2>(CurveEase e) { return e.double2Ease; }
+
+        #endregion
+
+        #region double3
+
+        protected Easing.Ease<double3> m_double3Ease;
+        public Easing.Ease<double3> double3Ease { get { return m_double3Ease; } }
+        protected double3 Double3Ease(double3 a, double3 b, float t, float d)
+        {
+            return lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<double3>(CurveEase e) { return e.double3Ease; }
+
+        #endregion
+
+        #region double4
+
+        protected Easing.Ease<double4> m_double4Ease;
+        public Easing.Ease<double4> double4Ease { get { return m_double4Ease; } }
+        protected double4 Double4Ease(double4 a, double4 b, float t, float d)
+        {
+            return lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<double4>(CurveEase e) { return e.double4Ease; }
+
+        #endregion
+
+
+        #region int
+
+        protected Easing.Ease<int> m_intEase;
+        public Easing.Ease<int> intEase { get { return m_intEase; } }
+        protected int IntEase(int a, int b, float t, float d)
+        {
+            return (int)lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<int>(CurveEase e) { return e.intEase; }
+
+        #endregion
+
+        #region int2
+
+        protected Easing.Ease<int2> m_int2Ease;
+        public Easing.Ease<int2> int2Ease { get { return m_int2Ease; } }
+        protected int2 Int2Ease(int2 a, int2 b, float t, float d)
+        {
+            return (int2)lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<int2>(CurveEase e) { return e.int2Ease; }
+
+        #endregion
+
+        #region int3
+
+        protected Easing.Ease<int3> m_int3Ease;
+        public Easing.Ease<int3> int3Ease { get { return m_int3Ease; } }
+        protected int3 Int3Ease(int3 a, int3 b, float t, float d)
+        {
+            return (int3)lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<int3>(CurveEase e) { return e.int3Ease; }
+
+        #endregion
+
+        #region int4
+
+        protected Easing.Ease<int4> m_int4Ease;
+        public Easing.Ease<int4> int4Ease { get { return m_int4Ease; } }
+        protected int4 Int4Ease(int4 a, int4 b, float t, float d)
+        {
+            return (int4)lerp(a, b, m_curve.Evaluate(m_sampling(0f, 1f, t, d)));
+        }
+
+        public static implicit operator Easing.Ease<int4>(CurveEase e) { return e.int4Ease; }
+
+        #endregion
+
 
         #region float
 
@@ -99,6 +216,7 @@ namespace Nebukam.Easing
         public static implicit operator Easing.Ease<float4>(CurveEase e) { return e.float4Ease; }
 
         #endregion
+
 
         #region quaternion
 

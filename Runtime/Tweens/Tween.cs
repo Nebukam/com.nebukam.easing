@@ -50,7 +50,7 @@ namespace Nebukam.Easing
             set { m_ease = value; m_val = InternalComputeValue(m_time); }
         }
 
-        
+
         /// <summary>
         /// Current value according to start/end value, easing equation and progress
         /// </summary>
@@ -64,19 +64,21 @@ namespace Nebukam.Easing
             get { return m_delay; }
             set { Set(m_time); }
         }
-        
+
         /// <summary>
         /// Current time
         /// </summary>
-        public float time { 
+        public float time
+        {
             get { return m_time; }
             set { Set(value); }
         }
-                
+
         /// <summary>
         /// Current duration
         /// </summary>
-        public float duration { 
+        public float duration
+        {
             get { return m_duration; }
             set { m_duration = value; Set(m_time); }
         }
@@ -84,26 +86,29 @@ namespace Nebukam.Easing
         /// <summary>
         /// Current progress
         /// </summary>
-        public float progress { 
+        public float progress
+        {
             get { return m_time / m_duration; }
             set { Set(value * m_duration); }
         }
 
-        
+
         public float timescale
         {
             get { return m_timescale; }
             set { m_timescale = value; }
         }
-        
-        public T from { 
+
+        public T from
+        {
             get { return m_from; }
             set { m_from = value; m_val = InternalComputeValue(m_time); }
         }
-        
-        public T to { 
+
+        public T to
+        {
             get { return m_to; }
-            set{ m_to = value; m_val = InternalComputeValue(m_time); }
+            set { m_to = value; m_val = InternalComputeValue(m_time); }
         }
 
         public bool done { get { return m_progress >= 1f; } }
@@ -140,7 +145,7 @@ namespace Nebukam.Easing
         {
             m_from = a;
             m_to = b;
-            ResetTime();    
+            ResetTime();
         }
 
         /// <summary>
@@ -202,7 +207,7 @@ namespace Nebukam.Easing
         /// <returns>Current value</returns>
         public virtual ITween Advance(float delta)
         {
-            if(m_previous != null && !m_previous.done)
+            if (m_previous != null && !m_previous.done)
             {
                 m_time = 0f;
             }
@@ -211,7 +216,7 @@ namespace Nebukam.Easing
                 m_time += (delta * m_timescale);
                 m_time = clamp(m_time, 0f, m_duration);
             }
-            
+
             m_timeClamped = clamp(m_time - m_delay, 0f, m_duration);
             m_progress = m_timeClamped / m_duration;
             m_val = InternalComputeValue(m_timeClamped);
