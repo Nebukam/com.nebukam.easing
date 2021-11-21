@@ -5,6 +5,7 @@
   "description": "Easing functions",
   "unity": "2019.4",
   "unityRelease": "17f1",
+  "documentationUrl":"https://nebukam.github.io/docs/unity/com.nebukam.easing/",
   "keywords": [],
   "category": "Easing",
   "author": {

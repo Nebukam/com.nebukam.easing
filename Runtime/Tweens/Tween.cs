@@ -102,13 +102,13 @@ namespace Nebukam.Easing
         public T from
         {
             get { return m_from; }
-            set { m_from = value; m_val = InternalComputeValue(m_time); }
+            set { m_from = value; m_val = m_time == 0f? m_from : InternalComputeValue(m_time); }
         }
 
         public T to
         {
             get { return m_to; }
-            set { m_to = value; m_val = InternalComputeValue(m_time); }
+            set { m_to = value; m_val = m_time == 0f ? m_from : InternalComputeValue(m_time); }
         }
 
         public bool done { get { return m_progress >= 1f; } }
