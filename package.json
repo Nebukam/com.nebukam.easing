@@ -15,5 +15,17 @@
   },
   "dependencies": {
     "com.unity.mathematics": "1.2.1"
-  }
+  },
+  "samples": [
+  {
+      "displayName": "Amplify Shader Functions",
+      "description": "Easing functions to be used with Amplify Shader Editor.",
+      "path": "Samples~/Amplify"
+    },
+    {
+      "displayName": "Easing & Tweens",
+      "description": "An example demonstrating how to make use of easing functions & tweening",
+      "path": "Samples~/Setup"
+    }
+  ]
 }
