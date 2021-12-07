@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019 Timothé Lapetite - nebukam@gmail.com.
+﻿// Copyright (c) 2021 Timothé Lapetite - nebukam@gmail.com.
 // Based on Robert Penner's easing equations : http://robertpenner.com/easing/
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
